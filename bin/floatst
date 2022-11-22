@@ -1,6 +1,6 @@
 st_geometry() {
-    # 单位x = 9, 单位y = 18
-    uw=8; uh=17
+    # 单位x = 3 单位y = 3
+    uw=14 uh=36
     mx=`xdotool getmouselocation --shell | grep X= | sed 's/X=//'`
     my=`xdotool getmouselocation --shell | grep Y= | sed 's/Y=//'`
     position=$1; c=$2; l=$3
@@ -30,4 +30,5 @@ st_geometry() {
     echo $c\x$l+$x+$y
 }
 
-st -c float -g $(st_geometry center 100 30)
+
+$(mpd; floatst -g $(floatst top_right 50 10) -t musi -c music -e 'ncmpcpp')

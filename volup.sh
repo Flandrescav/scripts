@@ -1,2 +1,2 @@
 #!/bin/bash
-amixer sset Master 5%+ unmute
+pactl set-sink-volume @DEFAULT_SINK@ +5%
